@@ -1,0 +1,8 @@
+platform :ios,'9.0'
+
+target '登录注册' do
+pod 'SDAutoLayout'
+pod 'BmobSDK'
+pod 'IQKeyboardManager'
+pod 'Reachability'
+end
