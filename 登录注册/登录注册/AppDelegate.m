@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <BmobSDK/Bmob.h>
+#import <IQKeyboardManager.h>
+
 
 @interface AppDelegate ()
 
@@ -16,6 +19,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [Bmob registerWithAppKey:@"a1b1724fdc336fdcd6638f48817bfa2a"];//申请的授权Key
+    [IQKeyboardManager sharedManager].enable = YES; // 关闭设置为NO, 默认值为NO.
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES; // 点击背景收起键盘
+
     // Override point for customization after application launch.
     return YES;
 }
